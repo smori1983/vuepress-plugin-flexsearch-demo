@@ -29,6 +29,18 @@ module.exports = {
 
   plugins: [
     [require('./plugins/wikipedia-citation')],
+
+    ['@smori1983/vuepress-plugin-flexsearch', {
+      //searchHotKeys: ['s', '/'],
+      //searchMaxSuggestions: 20,
+      //searchPaths: null,
+      //excerptAroundLength: 100,
+      //excerptHeadText: '... ',
+      //excerptTailText: ' ...',
+      //tokenizerType: 'kuromoji.default',
+      //ngramSize: 3,
+      //uiAlignRightFactor: 10,
+    }],
   ],
 
   markdown: {
