@@ -28,6 +28,7 @@ module.exports = {
   },
 
   plugins: [
+    [require('./plugins/wikipedia-citation')],
   ],
 
   markdown: {
