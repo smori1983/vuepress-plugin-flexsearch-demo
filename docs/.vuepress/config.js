@@ -17,13 +17,17 @@ module.exports = {
 
     locales: {
       '/': {
+        nav: [
+          { text: 'Debug', link: '/debug.md' },
+        ],
         sidebar: [
-          '/debug.md',
         ],
       },
       '/en/': {
+        nav: [
+          { text: 'Debug', link: '/en/debug.md' },
+        ],
         sidebar: [
-          '/en/debug.md',
         ],
       },
     },
