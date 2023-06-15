@@ -18,10 +18,12 @@ module.exports = {
     locales: {
       '/': {
         sidebar: [
+          '/debug.md',
         ],
       },
       '/en/': {
         sidebar: [
+          '/en/debug.md',
         ],
       },
     },
