@@ -29,7 +29,7 @@ module.exports = {
           {
             title: 'Pages',
             collapsable: false,
-            sidebarDepth: 1,
+            sidebarDepth: 0,
             children: sidebar.collect(path.resolve(__dirname, '..'), locales, '/'),
           },
         ],
@@ -42,7 +42,7 @@ module.exports = {
           {
             title: 'Pages',
             collapsable: false,
-            sidebarDepth: 1,
+            sidebarDepth: 0,
             children: sidebar.collect(path.resolve(__dirname, '..'), locales, '/en/'),
           },
         ],
