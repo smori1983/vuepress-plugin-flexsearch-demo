@@ -1,16 +1,21 @@
+const path = require('path');
+const sidebar = require('./sidebar');
+
+const locales = {
+  '/': {
+    lang: 'ja-JP',
+  },
+  '/en/': {
+    lang: 'en-US',
+  },
+};
+
 module.exports = {
   base: '/vuepress-plugin-flexsearch-demo/',
   title: 'vuepress-plugin-flexsearch Demo',
   dest: 'docs/.vuepress/dist',
 
-  locales: {
-    '/': {
-      lang: 'ja-JP',
-    },
-    '/en/': {
-      lang: 'en-US',
-    },
-  },
+  locales: locales,
 
   themeConfig: {
     searchPlaceholder: 'Search ( s, / )',
@@ -21,6 +26,12 @@ module.exports = {
           { text: 'Debug', link: '/debug.md' },
         ],
         sidebar: [
+          {
+            title: 'Pages',
+            collapsable: false,
+            sidebarDepth: 1,
+            children: sidebar.collect(path.resolve(__dirname, '..'), locales, '/'),
+          },
         ],
       },
       '/en/': {
@@ -28,6 +39,12 @@ module.exports = {
           { text: 'Debug', link: '/en/debug.md' },
         ],
         sidebar: [
+          {
+            title: 'Pages',
+            collapsable: false,
+            sidebarDepth: 1,
+            children: sidebar.collect(path.resolve(__dirname, '..'), locales, '/en/'),
+          },
         ],
       },
     },
