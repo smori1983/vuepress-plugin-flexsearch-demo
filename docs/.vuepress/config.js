@@ -27,10 +27,10 @@ module.exports = {
         ],
         sidebar: [
           {
-            title: 'Pages',
+            title: 'Wikipedia',
             collapsable: false,
             sidebarDepth: 0,
-            children: sidebar.collect(path.resolve(__dirname, '..'), locales, '/'),
+            children: sidebar.collect(path.resolve(__dirname, '..'), locales, '/wikipedia/'),
           },
         ],
       },
@@ -40,10 +40,10 @@ module.exports = {
         ],
         sidebar: [
           {
-            title: 'Pages',
+            title: 'Wikipedia',
             collapsable: false,
             sidebarDepth: 0,
-            children: sidebar.collect(path.resolve(__dirname, '..'), locales, '/en/'),
+            children: sidebar.collect(path.resolve(__dirname, '..'), locales, '/en/wikipedia/'),
           },
         ],
       },
