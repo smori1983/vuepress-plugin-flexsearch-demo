@@ -12,7 +12,7 @@
     "browserlist:update": "npx update-browserslist-db@latest"
   },
   "devDependencies": {
-    "@smori1983/vuepress-plugin-flexsearch": "github:smori1983/vuepress-plugin-flexsearch#aa95cc37fcfbe21432ee4b83265aa2c295db69ca",
+    "@smori1983/vuepress-plugin-flexsearch": "github:smori1983/vuepress-plugin-flexsearch#3fccc77033fd4e4a169cf0c5933e53a3c578e5ac",
     "@vue/babel-preset-app": "4.5.18",
     "http-server": "^14.1.1",
     "vuepress": "^1.9.9",
