@@ -16,12 +16,12 @@ module.exports = {
       //searchHotKeys: ['s', '/'],
       //searchMaxSuggestions: 20,
       //searchPaths: null,
+      //uiAlignRightFactor: 10,
       //excerptAroundLength: 100,
       //excerptHeadText: '... ',
       //excerptTailText: ' ...',
       //tokenizerType: 'kuromoji.default',
       //ngramSize: 3,
-      //uiAlignRightFactor: 10,
     }],
   ],
 
