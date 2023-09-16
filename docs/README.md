@@ -4,6 +4,9 @@ home: false
 # Demo site
 
 
+[npm](https://www.npmjs.com/package/@smori1983/vuepress-plugin-flexsearch)
+
+
 ## Config
 
 `.vuepress/config.js`
