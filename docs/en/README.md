@@ -13,6 +13,8 @@ module.exports = {
 
   plugins: [
     ['@smori1983/vuepress-plugin-flexsearch', {
+      excerptAroundLength: 200,
+
       //searchHotKeys: ['s', '/'],
       //searchMaxSuggestions: 20,
       //searchPaths: null,
