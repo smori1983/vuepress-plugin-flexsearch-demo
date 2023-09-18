@@ -3,7 +3,7 @@
 
 <WikipediaCitation
   language="ja"
-  title="90286169"
+  title="ドメイン固有言語"
   access="2023/06/18"
   version="90286169"
 />
