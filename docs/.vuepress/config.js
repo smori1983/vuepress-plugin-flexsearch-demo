@@ -22,10 +22,16 @@ module.exports = {
 
     locales: {
       '/': {
-        nav: [
-          { text: 'Debug', link: '/debug.md' },
-        ],
         sidebar: [
+          {
+            title: 'コンポーネント',
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+              '/form.md',
+              '/debug.md',
+            ],
+          },
           {
             title: 'Wikipedia',
             collapsable: false,
@@ -35,10 +41,16 @@ module.exports = {
         ],
       },
       '/en/': {
-        nav: [
-          { text: 'Debug', link: '/en/debug.md' },
-        ],
         sidebar: [
+          {
+            title: 'Components',
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+              '/en/form.md',
+              '/en/debug.md',
+            ],
+          },
           {
             title: 'Wikipedia',
             collapsable: false,
