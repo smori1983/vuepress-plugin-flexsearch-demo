@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vuepress dev --no-cache docs",
-    "dev:light": "VUEPRESS_FLEXSEARCH=disabled vuepress dev --no-cache docs",
-    "build": "vuepress build docs",
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider vuepress dev --no-cache docs",
+    "dev:light": "NODE_OPTIONS=--openssl-legacy-provider VUEPRESS_FLEXSEARCH=disabled vuepress dev --no-cache docs",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider vuepress build docs",
     "server": "http-server docs/.vuepress/dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "browserlist:update": "npx update-browserslist-db@latest"
