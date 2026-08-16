@@ -25,7 +25,6 @@ class Sidebar {
    * @return {string[]}
    */
   collect(target) {
-    const localeBasePath = this._getLocaleBasePath(target);
     const excludeDirectories = this._getExcludeDirectories(target);
 
     const targetDirectories = fs.readdirSync(localeBasePath, { withFileTypes: true })
@@ -40,6 +39,8 @@ class Sidebar {
       })
       .map(dirent => dirent.name)
       .sort();
+
+    const localeBasePath = this._getLocaleBasePath(target);
 
     return targetDirectories
       .map((dir) => {
