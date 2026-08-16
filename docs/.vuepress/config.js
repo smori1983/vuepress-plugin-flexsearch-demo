@@ -68,7 +68,7 @@ module.exports = {
     [require('./plugins/wikipedia-citation')],
 
     ['@smori1983/vuepress-plugin-flexsearch', {
-      excerptAroundLength: 200,
+      excerptAroundLength: 100,
 
       //searchHotKeys: ['s', '/'],
       //searchMaxSuggestions: 20,
