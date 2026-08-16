@@ -1,5 +1,5 @@
 const path = require('path');
-const sidebar = require('./sidebar');
+const Sidebar = require('./sidebar');
 
 const locales = {
   '/': {
