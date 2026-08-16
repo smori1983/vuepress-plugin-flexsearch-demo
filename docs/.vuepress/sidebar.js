@@ -53,10 +53,13 @@ const getLocaleBasePath = (basePath, target) => {
  * @return {string[]}
  */
 const getExcludeDirectories = (locales, target) => {
+  //
+  // If target is root, directories of other locales should be excluded.
+  //
   if (target === '/') {
     return Object.keys(locales)
-      .filter(path => path !== target)
-      .map(path => path.replace(/^\/|\/$/g, ''));
+      .filter(localeBasePath => localeBasePath !== target)
+      .map(localeBasePath => localeBasePath.replace(/^\/|\/$/g, ''));
   } else {
     return [];
   }
