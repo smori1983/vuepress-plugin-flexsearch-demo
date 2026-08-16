@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 
 /**
  * @param {string} basePath
@@ -44,11 +44,7 @@ const collect = (basePath, locales, target) => {
  * @return {string}
  */
 const getLocaleBasePath = (basePath, target) => {
-  if (target === '/') {
-    return basePath;
-  } else {
-    return path.join(basePath, target.replace(/^\//, ''));
-  }
+  return `${basePath}/${target}`.replace(/\/+/g, '/');
 };
 
 /**
@@ -57,10 +53,13 @@ const getLocaleBasePath = (basePath, target) => {
  * @return {string[]}
  */
 const getExcludeDirectories = (locales, target) => {
+  //
+  // If target is root, directories of other locales should be excluded.
+  //
   if (target === '/') {
     return Object.keys(locales)
-      .filter(path => path !== target)
-      .map(path => path.replace(/^\/|\/$/g, ''));
+      .filter(localeBasePath => localeBasePath !== target)
+      .map(localeBasePath => localeBasePath.replace(/^\/|\/$/g, ''));
   } else {
     return [];
   }
