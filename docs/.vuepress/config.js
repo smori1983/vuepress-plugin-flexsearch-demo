@@ -10,6 +10,8 @@ const locales = {
   },
 };
 
+const sidebar = new Sidebar(path.resolve(__dirname, '..'), locales);
+
 module.exports = {
   base: '/vuepress-plugin-flexsearch-demo/',
   title: 'vuepress-plugin-flexsearch Demo',
@@ -36,7 +38,7 @@ module.exports = {
             title: 'Wikipedia',
             collapsable: false,
             sidebarDepth: 0,
-            children: sidebar.collect(path.resolve(__dirname, '..'), locales, '/wikipedia/'),
+            children: sidebar.collect('/wikipedia/'),
           },
         ],
       },
@@ -55,7 +57,7 @@ module.exports = {
             title: 'Wikipedia',
             collapsable: false,
             sidebarDepth: 0,
-            children: sidebar.collect(path.resolve(__dirname, '..'), locales, '/en/wikipedia/'),
+            children: sidebar.collect('/en/wikipedia/'),
           },
         ],
       },
