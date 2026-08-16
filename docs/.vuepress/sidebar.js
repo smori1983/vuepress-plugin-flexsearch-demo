@@ -44,11 +44,7 @@ const collect = (basePath, locales, target) => {
  * @return {string}
  */
 const getLocaleBasePath = (basePath, target) => {
-  if (target === '/') {
-    return basePath;
-  } else {
-    return path.join(basePath, target.replace(/^\//, ''));
-  }
+  return `${basePath}/${target}`.replace(/\/+/g, '/');
 };
 
 /**
