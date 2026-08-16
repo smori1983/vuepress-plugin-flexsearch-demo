@@ -2,7 +2,7 @@
  * @typedef {import('vuepress-types').PluginOptionAPI} PluginOptionAPI
  */
 
-const path = require('path');
+const path = require('node:path');
 
 /**
  * @return {PluginOptionAPI}
