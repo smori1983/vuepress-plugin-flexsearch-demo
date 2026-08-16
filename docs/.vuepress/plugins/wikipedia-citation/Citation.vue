@@ -3,11 +3,7 @@
     Wikipedia contributors,
     "{{ title }}"
     <i>Wikipedia</i>,
-    <a
-      target="_blank"
-      v-bind:href="link">
-      {{ link }}
-    </a>
+    <a target="_blank" v-bind:href="link">{{ link }}</a>
     (accessed {{ access }}).
   </div>
 </template>
@@ -37,9 +33,9 @@ export default {
     link () {
       const url = `https://${this.language}.wikipedia.org/w/index.php`;
       const paramTitle = `title=${encodeURIComponent(this.title)}`;
-      const paramOldid = `oldid=${this.version}`;
+      const paramOldId = `oldid=${this.version}`;
 
-      return `${url}?${paramTitle}&${paramOldid}`;
+      return `${url}?${paramTitle}&${paramOldId}`;
     },
   },
 };
